@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background: grey">
+  <h1>Jouer pour raJEUnir</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Produit offert:</th>
+        <th>Nombre d'items <br>(limit de 5 par personne):</th>
+        <th>Images</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox" id="objetCartes" name="produit" value="cartes">
+  <label for="objetCartes">Cartes 5$</label><br></td>
+        <td><select id="nmbCartes">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>  <br></td>
+        <td><img src="https://m.media-amazon.com/images/I/51gX4y+juKL._AC_.jpg" width="125"></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="objetMonopoly" name="produit" value="monopoly">
+  <label for="objetMonopoly">Monopoly 20$</label><br></td>
+        <td><select id="nmbMonopoly">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select> <br></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Monopoly_board_on_white_bg.jpg/640px-Monopoly_board_on_white_bg.jpg" width="175"></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="objetSorry" name="produit" value="sorry">
+  <label for="objetSorry">Sorry 15$</label><br></td>
+        <td><select id="nmbSorry">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select> <br></td>
+        <td><img src="https://images.heb.com/is/image/HEBGrocery/001669716" width="150"></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="objetUno" name="produit" value="uno">
+  <label for="objetUno">Uno 10$</label><br></td>
+        <td><select id="nmbUno">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select> <br></td>
+        <td><img src="https://www.highsnobiety.com/static-assets/thumbor/kNVk-JHef0MZv-xjcRNqy4Cdfyw=/1600x1067/www.highsnobiety.com/static-assets/wp-content/uploads/2020/03/27170809/uno-minimalista-deck-01.jpg" width="175"></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" id="objetRisk" name="produit" value="risk">
+  <label for="objetRisk">Risk 25$</label><br><br></td>
+        <td><select id="nmbRisk">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select> <br><br></td>
+        <td><img src="https://i5.walmartimages.com/asr/170badc7-3e52-49a3-ae5f-651e0f9a867d_1.656ba6c3aab5fee3b0702754873f6534.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff" width="175"></td>
+      </tr>
+    </tbody>
+  </table>
+
+<label for=prov>Province:</label> <br>
+<input type="radio" id="provOn" name="taxe" value="Ontario"  checked>
+<label for="provOn">Ontario</label> <br>
+<input type="radio" id="provQu" name="taxe" value="Québec">
+<label for="provQu">Québec</label> <br><br>
+
+<label for=liv>Option de livraison:</label> <br>
+<input type="radio" id="jour5" name="livraison" value="5Jour">
+<label for="jour5">Livraison rapide (moins de 5 jours 40$)</label> <br>
+<input type="radio" id="jour+" name="livraison" value="+Jour"  checked>
+<label for="jour+">Livraison normal (plus de 5 jours 15$)</label> <br><br>
+
+
+  
+<input type="button" id="smtCommande" onclick="calculeRecu()" value="Calculer le recu">
+  <br><br>
+
+<div id="recu">
+</div>
+  <br><br>
+<script src=recu.js></script>
+
+
+   <label for="txtPrix">Avec combien allez vous payer:</label>
+    <input type="text" id="txtPrix">
+  <br><br>
+
+  <input type="button" id="smtArgent" onclick="calculerRendre()" value="Calculer l'argent a rendre">
+  <br><br>
+
+  <div id="erreur"></div>
+  <div id="rendre">
+</div>
+  <script src=rendre.js></script>
+</body>
+<a href="index.html">
+</html>
